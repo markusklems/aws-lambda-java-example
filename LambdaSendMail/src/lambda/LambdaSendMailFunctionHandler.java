@@ -20,9 +20,6 @@ import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 public class LambdaSendMailFunctionHandler implements
 		RequestHandler<DynamodbEvent, Object> {
 
-	static final String BODY = "This email was sent through Amazon SES by using the AWS SDK for Java.";
-	static final String SUBJECT = "Amazon SES test (AWS SDK for Java)";
-
 	@Override
 	public Object handleRequest(DynamodbEvent input, Context context) {
 		String employeeId = "";
