@@ -2,7 +2,9 @@
 
 A simple Java Lambda based server-less application that implements a reimbursement use case, with AWS Lambda, AWS API Gateway, AWS SES, and AWS DynamoDB. Set up the project with Eclipse and AWS Toolkit plugin.
 
-## Getting Started
+Please take a look at the wiki for a detailed [Getting Started - Step-by-Step](https://github.com/markusklems/aws-lambda-java-example/wiki/Getting-Started) guide.
+
+## Getting Started (Short)
 1. Set up Eclipse, import the projects, and install the AWS Eclipse Toolkit plugin.
 2. Upload the Lambda Functions (Right click on project > Amazon Web Services > Upload Function to AWS Lambda)
 3. Set up a DynamoDB table 'lambda-reimbursment' with Hash Key 'employee_id' (String). Set the DynamoDB tables as event source for LambdaSendMail and LambdaApproval. Create an API method, so that a click on the link (HTTP GET) calls the LambdaApproval Function (with a parameter 'employee_id').
