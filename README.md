@@ -17,7 +17,7 @@ A simple Java Lambda based server-less application that implements a reimburseme
 ### AWS Services setup
 1. Set up a DynamoDB table named 'lambda-reimbursment' with the Hash Key 'employee_id' of type String. In the example, the EU-WEST-1 region (Ireland) is chosen.
 2. In the AWS dashboard, go to Lambda > LambdaSendMail > Event source. Add an event source of type DynamoDB (table: lambda-reimbursment) with default settings.
-3. Do the same as in step 5 for LambdaApproval.
+3. Do the same (as in step 2) for LambdaApproval.
 4. In the AWS dashboard, go to API Gateway and create a new API that points at the LambdaApproval Function. Create a Resource "reimbursment" and a GET method. Click on "Method Request" and add a query string parameter "id". Click on "Integration Request" and add a Mapping Template with content type "application/json" and Template:
 ```
 {
